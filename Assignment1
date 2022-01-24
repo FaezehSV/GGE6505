@@ -1,0 +1,125 @@
+**1. Write a Python Program to Calculate the Area of a Triangle using Heron's formula.
+a = int (input ('enter a first number:'))
+b = int (input ('enter the second number:'))
+c = int (input ('enter the third number:'))
+
+import math
+s = (a+b+c)/2
+Area= math.sqrt(s*(s-a)*(s-b)*(s-c))
+print(Area,s)
+
+
+**2. Write a code to Generate a Random Number.**
+
+import random
+print(random.randint(0,1000))
+
+
+
+
+**3. Write a program to Check if a Number is Positive, Negative or 0**
+a = int (input ('Enter the number: '))
+if a > 0:
+   print ('a is a Positive number,')
+elif a == 0:
+   print ('a is Zero.')
+else:
+  print('a is Negative.')
+
+
+**4. Write a program to Access Index of a List Using for Loop**
+
+lst = []
+n = int(input("Enter the number of digits : "))
+
+for i in range(0, n):
+    digits = int(input())
+    lst.append(digits)  
+print(lst)
+
+for index in range(0,n):
+    digit = lst[index]
+    print(index, digit)
+    
+    
+    
+ **5.Write a Python Program to Check whether an integer is a prime number or not   
+
+a = int(input('Enter a number: '))
+if a > 1:
+   for i in range(2,a):
+       if (a % i) == 0:
+           print(" a is not a prime number")
+           break
+   else:
+       print("a is a prime number")
+       
+else:
+   print("a is not a prime number")
+   
+   
+   
+ **6. Write a Python Program to Sort Words in a sentence in Alphabetic Order
+
+word = input ('Enter a string: ')
+word_split = word.split(' ')
+for i in range(len(word_split)):
+    word_split[i]=word_split[i].lower()
+new_word = sorted(word_split)
+print(' '.join(new_word))
+
+
+**7. Write a Python program to make 4 slices to the list ([1, 2, 3, 4, 5]). The 5 outputs should be:
+lst = []
+n = 5
+for i in range(0, n):
+    digits = int(input())
+    lst.append(digits)  
+print(lst)
+
+print(lst[2:]) 
+print(lst[0:2]) 
+print(lst[2:4]) 
+print(lst[0:5:2])
+
+**8. Write a Python Program to Concatenate Two Lists.
+lst2 = []
+n2 = int(input("Enter the number of digits : "))
+
+for i in range(0, n2):
+    digit = int(input())
+    lst2.append(digit)  
+print(lst2)
+
+#list3 = []
+#for i in range (0,(n+n2)):
+#    list3.append([])
+#print(list3)
+
+for i in range (0,n2):
+  lst1.append(lst2[i])
+print(lst1)
+
+
+
+**9.Create a file with two numbers in it. Write a Python Program to read the 2 numbers from the file. Add and Subtract the numbers. Finaly, write the results in another file called 'result.txt'
+def connect():
+  from google.colab import drive
+  drive.mount('/content/gdrive')
+
+connect()
+f = open('/content/gdrive/My Drive/GGE6505.txt','r')
+a = list
+a = (f.readlines())
+#print(a)
+for i in range(2):
+  a[i]=int(a[i])
+print(a)
+
+print('Add is: ', a[0]+a[1])
+print('Subtract is: ', a[0]-a[1])
+b = []
+b = [a[0]+a[1], a[0]-a[1] ]
+file = open('/content/gdrive/My Drive/result.txt', 'w')
+file.write(str(b)+'\n')
+file.close()
